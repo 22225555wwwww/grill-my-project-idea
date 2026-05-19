@@ -18,56 +18,54 @@ Install it once as a skill/rule. Copy-paste prompts are only the fallback.
 
 优先安装成 skill/rule；复制粘贴只是备用方案。
 
-### Codex Skill
+### One-Line Install / 一键安装
 
 ```bash
-mkdir -p ~/.codex/skills/grill-my-project-idea
-cp adapters/codex/SKILL.md ~/.codex/skills/grill-my-project-idea/SKILL.md
+git clone https://github.com/22225555wwwww/grill-my-project-idea.git
+cd grill-my-project-idea
+./scripts/install.sh codex   # or: claude, claude-project, cursor, all
 ```
 
-Use:
+Targets:
+
+| Target | Installs to |
+|---|---|
+| `codex` | `~/.codex/skills/grill-my-project-idea/SKILL.md` |
+| `claude` | `~/.claude/skills/grill-my-project-idea/SKILL.md` |
+| `claude-project` | `./.claude/skills/grill-my-project-idea/SKILL.md` |
+| `cursor` | `./.cursor/rules/grill-my-project-idea.mdc` |
+| `all` | Codex + Claude personal + Cursor project rule |
+
+### Use / 调用
+
+Codex:
 
 ```text
 Use grill-my-project-idea to grill this project idea:
 [your idea]
 ```
 
-### Claude Skill
-
-Personal skill:
-
-```bash
-mkdir -p ~/.claude/skills/grill-my-project-idea
-cp adapters/claude/SKILL.md ~/.claude/skills/grill-my-project-idea/SKILL.md
-```
-
-Project skill:
-
-```bash
-mkdir -p .claude/skills/grill-my-project-idea
-cp adapters/claude/SKILL.md .claude/skills/grill-my-project-idea/SKILL.md
-```
-
-Use:
+Claude:
 
 ```text
 Use grill-my-project-idea to stress-test this idea before coding:
 [your idea]
 ```
 
-### Cursor Rule
-
-```bash
-mkdir -p .cursor/rules
-cp adapters/cursor/grill-my-project-idea.mdc .cursor/rules/grill-my-project-idea.mdc
-```
-
-Use:
+Cursor:
 
 ```text
 Use the grill-my-project-idea rule before implementation:
 [your idea]
 ```
+
+### Manual Install / 手动安装
+
+If you do not want to run the script, copy files manually:
+
+- Codex: copy [`adapters/codex/SKILL.md`](adapters/codex/SKILL.md) to `~/.codex/skills/grill-my-project-idea/SKILL.md`
+- Claude: copy [`adapters/claude/SKILL.md`](adapters/claude/SKILL.md) to `~/.claude/skills/grill-my-project-idea/SKILL.md`
+- Cursor: copy [`adapters/cursor/grill-my-project-idea.mdc`](adapters/cursor/grill-my-project-idea.mdc) to `.cursor/rules/grill-my-project-idea.mdc`
 
 ### Copy-Paste Fallback / 复制粘贴备用
 
