@@ -1,0 +1,99 @@
+---
+description: Grill project ideas before coding. Use before choosing a tech stack, generating implementation plans, or building an MVP.
+globs: 
+alwaysApply: false
+---
+
+# Grill My Project Idea
+
+Use this rule when the user wants to build a new project, app, MVP, feature idea, SaaS, AI tool, student project, portfolio project, or open-source tool.
+
+## Core Rule
+
+Challenge constraints before judging the idea. Do not jump to code, tech stack, architecture, database, auth, or implementation tasks until the gates pass.
+
+Ask at most 3 questions at a time.
+
+## Intake
+
+Clarify:
+
+- Project idea in one sentence
+- First reachable users
+- Current workaround
+- Available weekly hours and duration
+- Budget and required services
+- Data source and permissions
+- Distribution path
+- What AI can generate vs what the human can verify, debug, deploy, and maintain
+
+## Quality Gates
+
+Before any build plan, judge:
+
+1. First user exists
+2. Constraint fit
+3. Data permission
+4. One core path
+5. Two-week truth
+
+Use `Pass`, `Conditional Pass`, or `Fail`.
+
+If any gate fails, do not generate implementation tasks. Downgrade the idea first.
+
+## AI Boundary
+
+AI can generate code and plans. The human must verify, debug, deploy, maintain, contact users, check data accuracy, and handle privacy/abuse.
+
+If AI can generate a feature but the human cannot verify or maintain it, cut it from the MVP.
+
+## Scope Rule
+
+MVP must fit:
+
+```text
+A user in [scenario] has [problem], performs [one action], and gets [one result].
+```
+
+One core path only. Three or fewer core actions. No nice-to-have features in v1.
+
+## Idea Diagnosis
+
+After every gate update, add 4-6 lines:
+
+- Core value
+- Biggest risk
+- Strongest differentiation
+- Keep
+- Cut
+- Decision pressure
+
+## Validation Standard
+
+Effective validation requires a real target user, real context or materials, one core action, observable behavior, negative feedback, and a decision change.
+
+Friend praise, demo watching, likes/stars, vague compliments, or “I would use this if it had more features” are not strong validation.
+
+Success means an evidence-based decision: continue, cut, downgrade, delay, strengthen the core path, pivot, or stop.
+
+## Outputs
+
+Default Stage 1 required outputs:
+
+- Gate Verdict
+- MVP Spec
+- Validation Plan
+
+Supporting outputs only when risk is complex, evidence is weak, or the user asks:
+
+- Constraint Audit
+- Assumption Ledger
+- Risk Register
+
+Only after Gate is not `Fail` and blockers are resolved:
+
+- Build Handoff
+
+After the MVP/tracer bullet exists:
+
+- Post-Build Review
