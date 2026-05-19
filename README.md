@@ -3,9 +3,9 @@
 > **A portable AI skill for grilling project ideas before coding.**<br>
 > **一个在写代码前拷打项目想法的通用 AI skill。**
 
-Use it in Codex, Claude, Cursor, ChatGPT, Windsurf, or any AI coding tool to stress-test an idea before you build. It checks users, data, scope, validation, and whether the **human + AI pair** can actually verify, debug, maintain, and own the project.
+Use it in Codex, Claude, Kimi Code, Cursor, ChatGPT, Windsurf, or any AI coding tool to stress-test an idea before you build. It checks users, data, scope, validation, and whether the **human + AI pair** can actually verify, debug, maintain, and own the project.
 
-把它放进 Codex、Claude、Cursor、ChatGPT、Windsurf 或任意 AI 编程工具里，在写代码前拷打项目想法。它检查用户、数据、范围、验证计划，以及 **人 + AI** 是否真的能验证、调试、维护和负责。
+把它放进 Codex、Claude、Kimi Code、Cursor、ChatGPT、Windsurf 或任意 AI 编程工具里，在写代码前拷打项目想法。它检查用户、数据、范围、验证计划，以及 **人 + AI** 是否真的能验证、调试、维护和负责。
 
 **Skill = reusable package. Workflow = how it runs.**<br>
 **Skill 是可复用包装，workflow 是运行机制。**
@@ -23,7 +23,7 @@ Install it once as a skill/rule. Copy-paste prompts are only the fallback.
 ```bash
 git clone https://github.com/22225555wwwww/grill-my-project-idea.git
 cd grill-my-project-idea
-./scripts/install.sh codex   # or: claude, claude-project, cursor, all
+./scripts/install.sh codex   # or: claude, kimi, cursor, all
 ```
 
 Targets:
@@ -33,8 +33,10 @@ Targets:
 | `codex` | `~/.codex/skills/grill-my-project-idea/SKILL.md` |
 | `claude` | `~/.claude/skills/grill-my-project-idea/SKILL.md` |
 | `claude-project` | `./.claude/skills/grill-my-project-idea/SKILL.md` |
+| `kimi` | `~/.kimi/skills/grill-my-project-idea/SKILL.md` |
+| `kimi-project` | `./.kimi/skills/grill-my-project-idea/SKILL.md` |
 | `cursor` | `./.cursor/rules/grill-my-project-idea.mdc` |
-| `all` | Codex + Claude personal + Cursor project rule |
+| `all` | Codex + Claude personal + Kimi personal + Cursor project rule |
 
 ### Use / 调用
 
@@ -52,6 +54,13 @@ Use grill-my-project-idea to stress-test this idea before coding:
 [your idea]
 ```
 
+Kimi Code:
+
+```text
+Use grill-my-project-idea to grill this project idea before coding:
+[your idea]
+```
+
 Cursor:
 
 ```text
@@ -65,6 +74,7 @@ If you do not want to run the script, copy files manually:
 
 - Codex: copy [`adapters/codex/SKILL.md`](adapters/codex/SKILL.md) to `~/.codex/skills/grill-my-project-idea/SKILL.md`
 - Claude: copy [`adapters/claude/SKILL.md`](adapters/claude/SKILL.md) to `~/.claude/skills/grill-my-project-idea/SKILL.md`
+- Kimi Code: copy [`adapters/kimi/SKILL.md`](adapters/kimi/SKILL.md) to `~/.kimi/skills/grill-my-project-idea/SKILL.md`
 - Cursor: copy [`adapters/cursor/grill-my-project-idea.mdc`](adapters/cursor/grill-my-project-idea.mdc) to `.cursor/rules/grill-my-project-idea.mdc`
 
 ### Copy-Paste Fallback / 复制粘贴备用
@@ -168,7 +178,7 @@ Deep docs:
 
 ## Repository Map / 仓库结构
 
-- [`adapters/`](adapters/): Codex, Claude, and Cursor skill/rule adapters
+- [`adapters/`](adapters/): Codex, Claude, Kimi Code, and Cursor skill/rule adapters
 - [`prompts/`](prompts/): copy-paste fallback prompts
 - [`workflows/`](workflows/): full workflow rules
 - [`templates/`](templates/): output templates

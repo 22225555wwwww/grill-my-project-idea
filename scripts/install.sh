@@ -12,12 +12,15 @@ Targets:
   codex           Install Codex skill to ~/.codex/skills/grill-my-project-idea
   claude          Install Claude personal skill to ~/.claude/skills/grill-my-project-idea
   claude-project  Install Claude project skill to ./.claude/skills/grill-my-project-idea
+  kimi            Install Kimi personal skill to ~/.kimi/skills/grill-my-project-idea
+  kimi-project    Install Kimi project skill to ./.kimi/skills/grill-my-project-idea
   cursor          Install Cursor project rule to ./.cursor/rules/grill-my-project-idea.mdc
-  all             Install codex, claude, and cursor
+  all             Install codex, claude, kimi, and cursor
 
 Examples:
   ./scripts/install.sh codex
   ./scripts/install.sh claude
+  ./scripts/install.sh kimi
   ./scripts/install.sh cursor
   ./scripts/install.sh all
 USAGE
@@ -52,6 +55,18 @@ install_claude_project() {
     "$PWD/.claude/skills/grill-my-project-idea/SKILL.md"
 }
 
+install_kimi() {
+  copy_file \
+    "$repo_root/adapters/kimi/SKILL.md" \
+    "$HOME/.kimi/skills/grill-my-project-idea/SKILL.md"
+}
+
+install_kimi_project() {
+  copy_file \
+    "$repo_root/adapters/kimi/SKILL.md" \
+    "$PWD/.kimi/skills/grill-my-project-idea/SKILL.md"
+}
+
 install_cursor() {
   copy_file \
     "$repo_root/adapters/cursor/grill-my-project-idea.mdc" \
@@ -68,12 +83,19 @@ case "$target" in
   claude-project)
     install_claude_project
     ;;
+  kimi)
+    install_kimi
+    ;;
+  kimi-project)
+    install_kimi_project
+    ;;
   cursor)
     install_cursor
     ;;
   all)
     install_codex
     install_claude
+    install_kimi
     install_cursor
     ;;
   -h|--help|help|"")
