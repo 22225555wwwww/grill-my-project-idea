@@ -56,6 +56,41 @@ A user in **[scenario]** has **[problem]**, performs **[one action]**, and gets 
 4. 
 5. 
 
+## Build Module Scores / 构建模块评分
+
+Use this during implementation when reviewing modules, features, or issues. Scores are product-coach scores: they help decide keep, simplify, delay, or cut.
+
+构建过程中审查模块、功能或任务时使用。评分是产品教练分，用于决定保留、简化、延后或砍掉。
+
+| Module / 模块 | Core Path Fit 25 | User Value 20 | Simplicity 15 | Maintainability 15 | Validation Support 15 | Risk Control 10 | Total / 总分 | Decision / 决策 |
+|---|---:|---:|---:|---:|---:|---:|---:|---|
+|  |  |  |  |  |  |  |  | Keep/Simplify/Delay/Cut |
+
+For every low score, provide a constructive alternative: simplify, strengthen core path, prototype separately, delay, or cut.
+
+每个低分项都必须给替代方案：简化、强化核心路径、单独验证、延后或砍掉。
+
+## Feature Opportunity Review / 功能机会审查
+
+Use this when the user wants to add a new feature or side path. AI can suggest side paths, but cannot silently merge them into the current MVP.
+
+当用户想新增功能或旁支路径时使用。AI 可以提出旁支机会，但不能悄悄把旁支机会塞进当前 MVP。
+
+| Feature / 功能 | Core Path Boost 25 | User Evidence 20 | Low Cost 15 | Maintainability 15 | Validation Value 15 | Risk Control 10 | Total / 总分 | Decision / 决策 |
+|---|---:|---:|---:|---:|---:|---:|---:|---|
+|  |  |  |  |  |  |  |  | Adopt Now/Backlog/Prototype Separately/Reject |
+
+Before adopting, answer:
+
+采用前必须回答：
+
+1. Does it serve the current core path? / 它服务当前核心路径吗？
+2. Does it solve a real blocker for the current user? / 它解决当前用户的真实阻塞吗？
+3. Does it introduce new users, scenarios, data, permissions, or maintenance load? / 它是否引入新用户、新场景、新数据、新权限或新维护负担？
+4. Can it produce evidence in the current validation window? / 它能否在当前验证周期内产生证据？
+5. Will it delay the approved MVP? / 它会不会让当前 MVP 延期？
+6. Can the human+AI pair verify, debug, and maintain it? / 人+AI 能否验证、调试、维护它？
+
 ## Tracer Bullet / 最短闭环
 
 The first implementation slice must prove the core path with the least code.

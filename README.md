@@ -1,11 +1,11 @@
 # Grill My Project Idea / 拷打我的项目想法
 
-> **A portable AI skill for grilling project ideas before coding.**<br>
-> **一个在写代码前拷打项目想法的通用 AI skill。**
+> **A portable AI product-coach skill for scoring, grilling, and improving projects before, during, and after coding.**<br>
+> **一个在写代码前、构建中、实现后对项目进行评分、拷打和改进的通用 AI 产品教练 skill。**
 
-Use it in Codex, Claude, Kimi Code, Cursor, ChatGPT, Windsurf, or any AI coding tool to stress-test an idea before you build. It checks users, data, scope, validation, and whether the **human + AI pair** can actually verify, debug, maintain, and own the project.
+Use it in Codex, Claude, Kimi Code, Cursor, ChatGPT, Windsurf, or any AI coding tool to score an idea, review build modules, judge feature opportunities, and run post-build review. It checks users, data, scope, validation, and whether the **human + AI pair** can actually verify, debug, maintain, and own the project.
 
-把它放进 Codex、Claude、Kimi Code、Cursor、ChatGPT、Windsurf 或任意 AI 编程工具里，在写代码前拷打项目想法。它检查用户、数据、范围、验证计划，以及 **人 + AI** 是否真的能验证、调试、维护和负责。
+把它放进 Codex、Claude、Kimi Code、Cursor、ChatGPT、Windsurf 或任意 AI 编程工具里，对 idea 打分、审查构建模块、判断新增功能机会，并在实现后复盘。它检查用户、数据、范围、验证计划，以及 **人 + AI** 是否真的能验证、调试、维护和负责。
 
 **Skill = reusable package. Workflow = how it runs.**<br>
 **Skill 是可复用包装，workflow 是运行机制。**
@@ -107,6 +107,9 @@ Full demo: [`demos/30-second-demo.md`](demos/30-second-demo.md)
 **先拷打条件，再评价想法。**<br>
 **Before judging the idea, attack the constraints.**
 
+**No criticism without a constructive alternative.**<br>
+**没有替代方案的批评不合格。**
+
 Ask first / 必须先问：
 
 - Who is the first reachable user? / 第一个可接触用户是谁？
@@ -128,6 +131,22 @@ Normal AI chat often follows your premise. This skill blocks fantasy by default.
 - AI can generate it but the human cannot verify/maintain it → not MVP-safe
 - Praise without behavior evidence → validation failed
 - Too many features → force one core path
+- New side path → score it before adding it
+
+---
+
+## Coach Scores / 产品教练分
+
+Scores are decision-readiness scores, not project-worth scores. High score does not mean build everything. Low score does not mean the idea is worthless.
+
+评分是决策准备度，不是项目价值总分。高分不代表全做，低分不代表想法没价值。
+
+| Moment | Score | Decision |
+|---|---|---|
+| Before build | Idea Coach Score | Strong Pass / Conditional Pass / Risky / Fail for Now |
+| During build | Build Module Score | Keep / Simplify / Delay / Cut |
+| Adding features | Feature Opportunity Score | Adopt Now / Backlog / Prototype Separately / Reject |
+| After build | Post-Build Coach Score | Continue / Iterate / Downgrade / Simplify / Stop / Pivot |
 
 ---
 

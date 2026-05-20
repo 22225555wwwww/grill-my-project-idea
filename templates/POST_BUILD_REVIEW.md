@@ -21,6 +21,37 @@ Use this after the MVP or tracer bullet exists.
 | AI output is verified / AI 输出已验证 | Pass/Fail |  |  |
 | Validation happened / 已真实验证 | Pass/Fail |  |  |
 
+## Post-Build Coach Score / 实现后产品教练分
+
+Score: [0-100]
+
+This score decides whether the project deserves more investment. It is not just a code quality score.
+
+这个分数用于判断项目是否值得继续投入，不只是代码质量分。
+
+| Dimension / 维度 | Weight / 权重 | Score / 得分 | Evidence / 证据 |
+|---|---:|---:|---|
+| Core path works / 核心路径可用 | 20 |  |  |
+| Scope discipline / 范围控制 | 15 |  |  |
+| User understanding / 用户是否理解 | 15 |  |  |
+| Evidence quality / 证据质量 | 20 |  |  |
+| Maintainability / 可维护性 | 15 |  |  |
+| Next decision clarity / 下一步清晰度 | 15 |  |  |
+
+Score meaning / 分数含义：
+
+- 85-100: Continue
+- 70-84: Iterate
+- 50-69: Downgrade / Simplify
+- 0-49: Stop or Pivot
+
+## Coach Summary / 产品教练总结
+
+- Top strengths / 最大优势：
+- Top risks / 最大风险：
+- Recommended decision / 推荐决策：Continue / Iterate / Downgrade / Simplify / Stop / Pivot
+- One concrete improvement / 一个具体改进：
+
 ## Feature Creep Audit / 功能回潮审计
 
 List anything added that was not in `MVP_SPEC.md`.
@@ -30,6 +61,10 @@ List anything added that was not in `MVP_SPEC.md`.
 | Added / 新增 | Why added / 为什么加 | Keep or remove / 保留或移除 |
 |---|---|---|
 |  |  |  |
+
+If a new feature is useful but outside the current core path, do not silently keep it. Mark it as Backlog, Prototype Separately, or Remove.
+
+如果新增功能有用但不属于当前核心路径，不要默认保留。标记为后续、单独验证或移除。
 
 ## User Evidence / 用户证据
 
