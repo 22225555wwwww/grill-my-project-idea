@@ -4,6 +4,17 @@ Use this only after Gate Verdict is `Pass` or `Conditional Pass` with blockers r
 
 仅在质量门判定为 `Pass`，或 `Conditional Pass` 且阻塞已处理后使用。
 
+This file is the input spec for Build Mode. It freezes scope; it does not execute implementation. To code, use [`prompts/build-zh.md`](../prompts/build-zh.md) or [`prompts/build-en.md`](../prompts/build-en.md).
+
+本文件是 Build Mode 的输入规格。它负责冻结范围，不负责执行实现。真正写代码时，使用 [`prompts/build-zh.md`](../prompts/build-zh.md) 或 [`prompts/build-en.md`](../prompts/build-en.md)。
+
+
+## Build Mode Boundary / Build Mode 边界
+
+`BUILD_HANDOFF.md` defines what to build. Build Mode writes code, self-reviews implementation, scores it, and asks the user only for product decisions.
+
+`BUILD_HANDOFF.md` 定义要构建什么。Build Mode 负责编写代码、自审实现、打分，并且只在产品决策上询问用户。
+
 ## Gate Status / 质量门状态
 
 - Verdict / 判定：Pass / Conditional Pass

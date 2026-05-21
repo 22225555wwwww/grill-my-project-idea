@@ -83,6 +83,8 @@ If your tool does not support skills/rules:
 
 - 中文短版：[`prompts/short-zh.md`](prompts/short-zh.md)
 - English short prompt: [`prompts/short-en.md`](prompts/short-en.md)
+- 从 handoff 开始写代码：[`prompts/build-zh.md`](prompts/build-zh.md)
+- Build from handoff: [`prompts/build-en.md`](prompts/build-en.md)
 - 中文完整 workflow：[`workflows/zh.md`](workflows/zh.md)
 - English full workflow: [`workflows/en.md`](workflows/en.md)
 
@@ -159,7 +161,7 @@ This is a complete workflow suite, but not every template is required by default
 | Stage | Goal | Required outputs | Supporting outputs |
 |---|---|---|---|
 | Stage 1: Grill Idea | Decide whether the idea deserves an MVP | `GATE_VERDICT.md`, `MVP_SPEC.md`, `VALIDATION_PLAN.md` | `CONSTRAINT_AUDIT.md`, `ASSUMPTION_LEDGER.md`, `RISK_REGISTER.md` |
-| Stage 2: Build Handoff | Freeze scope for a coding agent | `BUILD_HANDOFF.md` | Only if Gate is not `Fail` and blockers are resolved |
+| Stage 2: Build Mode | Freeze scope, implement tracer bullet, self-review and score | `BUILD_HANDOFF.md`, then `prompts/build-*.md` | Only if Gate is not `Fail` and blockers are resolved |
 | Stage 3: Post-Build Review | Check whether the built thing has evidence | `POST_BUILD_REVIEW.md` | Use after MVP/tracer bullet exists |
 
 Templates: [`templates/`](templates/)

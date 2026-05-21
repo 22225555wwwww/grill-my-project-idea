@@ -172,3 +172,20 @@ Stage 3 output after a built MVP or tracer bullet exists:
 Only create a build handoff when Gate Verdict is `Pass`, or `Conditional Pass` with blockers resolved.
 
 The handoff must freeze the approved scope around one core path. Improvements may strengthen the core path. Side paths require Feature Opportunity Review before adoption.
+
+## Build Mode Rule
+
+Build Handoff is the input spec; Build Mode is the execution behavior. When the user asks to implement from an approved handoff, code first, then self-review and score.
+
+1. Read the Build Handoff first.
+2. If Goal, Core User Path, Must Build, or Acceptance Criteria are missing, stop and ask for the missing handoff details.
+3. If the handoff is clear, implement the Tracer Bullet directly: the smallest slice that proves the core user path.
+4. Build only Must Build; do not build Must Not Build.
+5. Do not add auth, database, AI API, realtime sync, mobile app, or admin dashboard unless explicitly required by the handoff.
+6. Decide routine engineering details without interrupting the user; ask only for product decisions such as changing the core path, adding dependencies, accepting downgrades, keeping/cutting features, or delaying validation.
+7. If blocked, use Downgrade Rules instead of expanding scope.
+8. After edits, run the smallest useful validation.
+9. Self-review with Implementation Score / 100: Core Path Works 30, Scope Discipline 20, Simplicity 15, Maintainability 15, Validation 15, User Decision Needed 5.
+10. Report Implemented, Files Changed, Validation, Implementation Score, Optimization Order, User Decisions Needed, Scope Guard, and exactly one Next Small Step.
+
+Optimization Order must use: P0 blocks core path, P1 blocks validation, P2 maintainability/simplification, P3 UX/polish, Backlog outside current MVP.

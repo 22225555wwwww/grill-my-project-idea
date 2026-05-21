@@ -35,19 +35,23 @@ Exit only if:
 - Gate Verdict is `Pass`, or
 - Gate Verdict is `Conditional Pass` and blockers are resolved.
 
-## Stage 2: Build Handoff / 实现交接
+## Stage 2: Build Handoff + Execution / 实现交接 + 执行
 
-Goal: freeze scope and hand the MVP to a coding agent without re-opening fantasy.
+Goal: freeze scope, then start the tracer-bullet implementation without re-opening fantasy.
 
-目标：冻结范围，把 MVP 交给 coding agent，不重新打开幻想。
+目标：先冻结范围，再启动最短闭环实现，不重新打开幻想。
 
 Use:
 
 - [`templates/BUILD_HANDOFF.md`](../templates/BUILD_HANDOFF.md)
+- [`prompts/build-zh.md`](../prompts/build-zh.md) or [`prompts/build-en.md`](../prompts/build-en.md) to start coding from the handoff
 
 Rules:
 
 - Start with tracer bullet, not full product.
+- `BUILD_HANDOFF.md` freezes scope; `prompts/build-*.md` starts implementation.
+- Build Mode writes code first, then self-reviews, scores implementation, and orders optimizations.
+- Ask users only for product decisions, not routine engineering details.
 - Do not add auth/database/AI API/realtime/mobile unless MVP explicitly requires it.
 - Every issue must map to the core user path or acceptance criteria.
 - If blocked, downgrade instead of expanding scope.
